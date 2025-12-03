@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="Simple_Apple_Fetch">
+      <!-- 1. Open the door -->
+      <Action ID="OpenDoorAction"/>
+      
+      <!-- 2. Pick up the apple -->
+      <Action ID="PickAppleAction"/>
+      
+      <!-- 3. Close the door -->
+      <Action ID="CloseDoorAction"/>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

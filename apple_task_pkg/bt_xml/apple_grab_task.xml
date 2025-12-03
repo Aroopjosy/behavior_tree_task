@@ -1,0 +1,41 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="Apple_Fetching_Task">
+      
+      <Action ID="MoveToRoomDoor"/>
+      
+      <Fallback name="DoorEntryFallback">
+        <Sequence name="DoorOpenSequence">
+          <Action ID="CheckDoorOpen"/>
+          <Action ID="EnterRoomAction"/>
+        </Sequence>
+        <Sequence name="DoorClosedSequence">
+          <Action ID="OpenDoorAction"/>
+          <Action ID="EnterRoomAction"/>
+        </Sequence>
+      </Fallback>
+      
+      <Action ID="MoveToFridgeDoor"/>
+      
+      <Fallback name="FridgeEntryFallback">
+        <Sequence name="FridgeDoorOpenSequence">
+          <Action ID="CheckFridgeDoorOpen"/>
+          <Action ID="FindAppleAction"/>
+        </Sequence>
+        <Sequence name="FridgeDoorClosedSequence">
+          <Action ID="OpenFridgeDoorAction"/>
+          <Action ID="FindAppleAction"/>
+        </Sequence>
+      </Fallback>
+
+      <Action ID="PickAppleAction"/>
+      
+      <Action ID="CloseFridgeDoorAction"/>
+      
+      <Action ID="MoveToRoomDoorForExit"/>
+      
+      <Action ID="ExitRoomAction"/>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>
