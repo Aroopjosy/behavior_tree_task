@@ -32,7 +32,4 @@ Note: Output like
 [INFO] [1764914509.744061164] [BT_Executor]: CONDITION Checking: CheckDoorOpen
 [INFO] [1764914509.744063974] [BT_Executor]: 
 ........
-......```
-
-
-
+......
